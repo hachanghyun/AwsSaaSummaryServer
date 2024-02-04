@@ -15,7 +15,7 @@ import java.util.List;
 @Tag(name = "게시판 API", description = "게시물 API")
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class PostController {
 
