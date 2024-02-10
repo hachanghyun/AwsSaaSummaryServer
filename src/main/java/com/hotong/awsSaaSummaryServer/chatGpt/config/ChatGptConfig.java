@@ -15,7 +15,7 @@ public class ChatGptConfig {
     @Value("${myapp.gptKey}")
     private String API_KEY;
     private String MODEL = "gpt-3.5-turbo-instruct";
-    private Integer MAX_TOKEN = 300;
+    private Integer MAX_TOKEN = 500;
     private Double TEMPERATURE = 0.0;
     private Double TOP_P = 1.0;
     private String MEDIA_TYPE = "application/json; charset=UTF-8";
