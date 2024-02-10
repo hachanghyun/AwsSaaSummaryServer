@@ -6,6 +6,7 @@ import com.hotong.awsSaaSummaryServer.SaaSum.entity.ChapterDetail;
 import com.hotong.awsSaaSummaryServer.SaaSum.repository.ChapterDetailRepository;
 import com.hotong.awsSaaSummaryServer.SaaSum.repository.ChapterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,6 +41,12 @@ public class ChapterController {
         return chapterDetailRepository.findById(detailId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+
+    // 모든 목차를 불러오는 API 엔드포인트
+    @GetMapping("/search")
+    public List<ChapterDetail> getAllChapterDetail() {
+        return chapterDetailRepository.findAll(Sort.by("content"));
     }
 }
 
