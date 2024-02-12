@@ -6,3 +6,7 @@
 ### elastic beanstalk
   clinet -> EC2 -> RDS
   EC2 보안그룹에 RDB 보안그룹 등록해야함
+
+### zsh설정법
+  vim ~/.zshrc
+  
