@@ -2,8 +2,8 @@ package com.hotong.awsSaaSummaryServer.notice.controller;
 
 import com.hotong.awsSaaSummaryServer.notice.entity.Post;
 import com.hotong.awsSaaSummaryServer.notice.repository.PostRepository;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+//import io.swagger.v3.oas.annotations.Operation;
+//import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Tag(name = "게시판 API", description = "게시물 API")
+//@Tag(name = "게시판 API", description = "게시물 API")
 @RestController
 @RequestMapping("/api")
 //@CrossOrigin(origins = "*")
@@ -22,7 +22,7 @@ public class PostController {
     @Autowired
     private PostRepository postRepository;
 
-    @Operation(summary = "게시물 조회", description = "게시물 조회")
+    //@Operation(summary = "게시물 조회", description = "게시물 조회")
     @GetMapping("/posts")
     public ResponseEntity<List<Post>> getAllPosts() {
         try {
@@ -38,7 +38,7 @@ public class PostController {
         }
     }
 
-    @Operation(summary = "게시물 등록", description = "게시물 등록")
+    //@Operation(summary = "게시물 등록", description = "게시물 등록")
     @PostMapping("/posts")
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
         try {

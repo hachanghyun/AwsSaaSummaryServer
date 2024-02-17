@@ -4,6 +4,6 @@ server:
 spring:
   profiles:
     include:
-      - oauth
       - gpt
-      - db
+      #- local
+      - prod
