@@ -4,7 +4,7 @@ package com.hotong.awsSaaSummaryServer.chatGpt.service;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.request.BotRequest;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.response.ChatGptResponse;
 
-public interface BotService {
+public interface ChatGptService {
 
     ChatGptResponse askQuestion(BotRequest botRequest);
 
@@ -13,5 +13,6 @@ public interface BotService {
     ChatGptResponse askQuestionAnswer(BotRequest botRequest);
 
     ChatGptResponse askQuestionOriginal(BotRequest botRequest);
+
     ChatGptResponse askQuestionOriginal2(BotRequest botRequest);
 }

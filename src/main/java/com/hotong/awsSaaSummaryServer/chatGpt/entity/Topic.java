@@ -15,11 +15,5 @@ public class Topic {
     private Long id;
 
     private String name;
-
-    // Topic과 Subtopic 간의 일대다 관계 정의
-    //@OneToMany(mappedBy = "topic")
-   // private List<Subtopic> subtopics;
-
-    // Getter, Setter, Constructors
 }
 

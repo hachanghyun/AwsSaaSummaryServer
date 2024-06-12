@@ -1,11 +1,9 @@
 package com.hotong.awsSaaSummaryServer.chatGpt.service;
 
 import com.hotong.awsSaaSummaryServer.chatGpt.config.ChatGptConfig;
-import com.hotong.awsSaaSummaryServer.chatGpt.entity.Exam;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.request.BotRequest;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.request.ChatGptRequest;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.response.ChatGptResponse;
-import com.hotong.awsSaaSummaryServer.chatGpt.repository.ExamRepository;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -17,13 +15,10 @@ import org.springframework.web.client.RestTemplate;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Optional;
-import java.util.function.Supplier;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Service
-public class BotServiceImpl implements BotService {
+public class ChatGptServiceImpl implements ChatGptService {
 
     private static RestTemplate restTemplate = new RestTemplate();
     private final static Logger LOG = Logger.getGlobal();

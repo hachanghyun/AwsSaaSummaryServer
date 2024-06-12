@@ -6,7 +6,7 @@ import com.hotong.awsSaaSummaryServer.chatGpt.entity.Topic;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.request.BotRequest;
 import com.hotong.awsSaaSummaryServer.chatGpt.model.response.ChatGptResponse;
 import com.hotong.awsSaaSummaryServer.chatGpt.repository.SubtopicRepository;
-import com.hotong.awsSaaSummaryServer.chatGpt.service.BotService;
+import com.hotong.awsSaaSummaryServer.chatGpt.service.ChatGptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.hotong.awsSaaSummaryServer.chatGpt.repository.TopicRepository;
@@ -17,14 +17,28 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/topics")
-public class BotController {
+public class ChatGptController {
 
-    @Autowired
-    private BotService botService;
-
-    public BotController(BotService botService, ExamRepository examRepository) {
+    public ChatGptController(ChatGptService botService, ExamRepository examRepository) {
         this.botService = botService;
         this.examRepository = examRepository;
+    }
+
+    @Autowired
+    private ChatGptService botService;
+
+    @Autowired
+    private final ExamRepository examRepository;
+
+    @Autowired
+    private TopicRepository topicRepository;
+
+    @Autowired
+    private SubtopicRepository subtopicRepository;
+
+    @GetMapping
+    public List<Topic> getAllTopics() {
+        return topicRepository.findAll();
     }
 
     @PostMapping("/send")
@@ -52,24 +66,10 @@ public class BotController {
         return botService.askQuestionOriginal2(botRequest);
     }
 
-    @Autowired
-    private final ExamRepository examRepository;
-
     @GetMapping("/{id}")
     public Optional<Exam> getExamById(@PathVariable("id") Long id) {
         return examRepository.findById(id);
     }
-
-    @Autowired
-    private TopicRepository topicRepository;
-
-    @GetMapping
-    public List<Topic> getAllTopics() {
-        return topicRepository.findAll();
-    }
-
-    @Autowired
-    private SubtopicRepository subtopicRepository;
 
     @GetMapping("/{topicId}/subtopics")
     public List<Subtopic> getSubtopicsByTopic(@PathVariable("topicId") Long topicId) {
