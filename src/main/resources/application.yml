@@ -5,5 +5,5 @@ spring:
   profiles:
     include:
       - gpt
-      #- local
-      - prod
+      - local
+      #- prod

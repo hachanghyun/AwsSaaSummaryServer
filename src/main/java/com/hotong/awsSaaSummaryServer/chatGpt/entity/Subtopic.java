@@ -18,5 +18,4 @@ public class Subtopic {
     @JoinColumn(name = "topic_id", nullable = false)
     private Topic topic;
 
-    // Getter, Setter, Constructors
 }
