@@ -1,5 +1,5 @@
 ## 1. SERVER Deployment URL
-  https://github.com/hachanghyun/awsSaaSumServer
+  https://github.com/hachanghyun/awsSaaSummaryServer
 
 ## 2. FrontEnd Deployment URL
   https://github.com/hachanghyun/AwsSaaSumApp
