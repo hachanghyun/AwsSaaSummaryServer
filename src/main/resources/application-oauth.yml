@@ -1,0 +1,11 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 구글이 제공한 client-id
+            client-secret: 구글이 제공한 client-secret
+            scope:
+              - profile
+              - email
