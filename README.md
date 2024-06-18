@@ -1,3 +1,9 @@
+## 1. SERVER Deployment URL
+  https://github.com/hachanghyun/awsSaaSummaryServer
+
+## 2. FrontEnd Deployment URL
+  https://github.com/hachanghyun/AwsSaaSumApp
+
 # awsSaaSummaryServer 
 
 ## elastic beanstalk 적용 
