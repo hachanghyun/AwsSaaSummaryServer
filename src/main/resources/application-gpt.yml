@@ -1,2 +1,0 @@
-myapp:
-  gptKey: ${OPENAI_API_KEY}
