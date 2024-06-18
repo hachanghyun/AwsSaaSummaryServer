@@ -4,8 +4,6 @@
 ## FrontEnd Deployment URL
   https://github.com/hachanghyun/AwsSaaSumApp
 
-# awsSaaSummaryServer 
-
 ## elastic beanstalk 적용 
   SSL 적용, 기존APP에서는 HTTP통신 안됨, HTTPS 통신만 가능!!!
   도메인 가비아에서 구매후 -> route53에 도메인 등록후 -> AWS Certificate Manager(ACM) 에 route 53에 서브도메인 등록 해두면, 그 도메인 4개의 주소로 인증을 하는 방식!! -> elasticbeanstak에서도 https 적용 시켜준다음에 진행 하면 됨
